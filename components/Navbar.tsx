@@ -6,11 +6,13 @@ import React, { useState } from "react";
 // import { MdOutlineClose, MdMenu } from "react-icons/md";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import Image from "next/image";
+import { links } from "../data";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav
       id="home"
@@ -28,19 +30,20 @@ const Navbar = (props: Props) => {
       <div
         className={`${
           menuOpen
-            ? "absolute top-24 z-10 flex w-[90%] flex-col items-center gap-y-10 rounded-3xl bg-[#0B1D26] pb-12 pt-8 text-yellow-300"
+            ? "fixed top-24 z-10 flex w-[90%] flex-col items-center gap-y-10 rounded-3xl bg-[#050d11] pb-12 pt-8 text-yellow-300"
             : "hidden gap-x-8 self-center text-white md:flex"
         }`}
       >
-        <Link onClick={() => setMenuOpen(false)} href="#home">
-          Home
-        </Link>
-        <Link onClick={() => setMenuOpen(false)} href="#features">
-          Features
-        </Link>
-        <Link onClick={() => setMenuOpen(false)} href="#contact">
-          Contact
-        </Link>
+        {links.map((link) => (
+          <Link
+            onClick={() => setMenuOpen(false)}
+            href={link.href}
+            key={link.id}
+            className="capitalize"
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
       <div
         className={`${
@@ -49,12 +52,14 @@ const Navbar = (props: Props) => {
         }`}
       ></div>
       <div className="self-center">
-        <HiUserCircle className="w-16 fill-white" />
+        <HiUserCircle className="h-6 w-6 fill-white" />
       </div>
       <button
-        className="z-10 flex rounded-full bg-[#0B1D26] px-2 py-2 text-yellow-300 md:hidden"
+        className="z-10 fixed right-5 flex rounded-full bg-[#050d11] px-2 py-2 text-yellow-300 md:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
-      >{menuOpen ? <HiXMark /> : <HiBars3 />}</button>
+      >
+        {menuOpen ? <HiXMark /> : <HiBars3 />}
+      </button>
     </nav>
   );
 };

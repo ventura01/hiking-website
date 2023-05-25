@@ -9,8 +9,8 @@ const Features = (props: Props) => {
     <section id="features" className="container mx-auto max-w-screen-xl">
       <article className="grid grid-cols-1 py-32 md:grid-cols-2">
         <div>
-          <div className="relative flex flex-col gap-y-5 md:pr-32 px-5 md:px-0">
-            <span className="absolute md:-left-20 left-0 -top-16 text-9xl text-white opacity-20">
+          <div className="relative flex flex-col gap-y-5 px-5 md:px-0 md:pr-32">
+            <span className="absolute -top-16 left-0 text-9xl text-white opacity-20 md:-left-20">
               01
             </span>
             <div className="flex gap-x-3 ">
@@ -30,7 +30,7 @@ const Features = (props: Props) => {
               you – novice, moderate, advanced moderate, expert, or expert
               backpacker?
             </p>
-            <div className="flex items-center gap-x-3 mb-10 md:mb-0">
+            <div className="mb-10 flex items-center gap-x-3 md:mb-0">
               <span className="text-yellow-300">Read more</span>
               <HiArrowLongRight size={"24px"} className="fill-yellow-300" />
             </div>
@@ -57,8 +57,8 @@ const Features = (props: Props) => {
           />
         </div>
         <div className="row-start-1 row-end-2 md:col-start-2 md:col-end-3">
-          <div className="relative flex flex-col gap-y-5 md:pl-32 px-5 md:px-0">
-            <span className="absolute -top-16 md:left-12 left-0 text-9xl text-white opacity-20">
+          <div className="relative flex flex-col gap-y-5 px-5 md:px-0 md:pl-32">
+            <span className="absolute -top-16 left-0 text-9xl text-white opacity-20 md:left-12">
               02
             </span>
             <div className="flex gap-x-3 ">
@@ -77,7 +77,7 @@ const Features = (props: Props) => {
               beginners make is wearing jeans and regular clothes, which will
               get heavy and chafe wif they get sweaty or wet.
             </p>
-            <div className="flex items-center gap-x-3 mb-10 md:mb-0">
+            <div className="mb-10 flex items-center gap-x-3 md:mb-0">
               <span className="text-yellow-300">Read more</span>
               <HiArrowLongRight size={"24px"} className="fill-yellow-300" />
             </div>
@@ -86,8 +86,8 @@ const Features = (props: Props) => {
       </article>
       <article className="grid grid-cols-1 py-32 md:grid-cols-2">
         <div>
-          <div className="relative flex flex-col gap-y-5 md:pr-32 px-5 md:px-0">
-            <span className="absolute left-0 md:-left-20 -top-16 text-9xl text-white opacity-20">
+          <div className="relative flex flex-col gap-y-5 px-5 md:px-0 md:pr-32">
+            <span className="absolute -top-16 left-0 text-9xl text-white opacity-20 md:-left-20">
               03
             </span>
             <div className="flex gap-x-3 ">
@@ -106,7 +106,7 @@ const Features = (props: Props) => {
               next landmark is as I hike. For example, I’ll read the guide and
               know that say, in a mile, I make a right turn at the junction..
             </p>
-            <div className="flex items-center gap-x-3 mb-10 md:mb-0">
+            <div className="mb-10 flex items-center gap-x-3 md:mb-0">
               <span className="text-yellow-300">Read more</span>
               <HiArrowLongRight size={"24px"} className="fill-yellow-300" />
             </div>

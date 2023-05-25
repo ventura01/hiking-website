@@ -28,8 +28,7 @@ const HeroSection = (props: Props) => {
               </p>
             </div>
             <h1 className="text-center text-5xl text-white md:text-left md:text-8xl">
-              Be prepared for the{" "}
-              <br className="hidden md:flex" />
+              Be prepared for the <br className="hidden md:flex" />
               Mountains and beyond!
             </h1>
             <div className="flex items-center gap-x-3">
