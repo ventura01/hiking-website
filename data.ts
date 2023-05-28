@@ -3,8 +3,8 @@ type LinksProps = { id: number; name: string; href: string };
 export const links: LinksProps[] = [
   { id: 1, name: "home", href: "#home" },
   { id: 2, name: "features", href: "#features" },
-  { id: 2, name: "testimonials", href: "#testimonials" },
-  { id: 3, name: "contact", href: "#contact" },
+  { id: 3, name: "testimonials", href: "#testimonials" },
+  { id: 4, name: "contact", href: "#contact" },
 ];
 
 export type TestimonialsProps = {
