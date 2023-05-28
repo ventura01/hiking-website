@@ -42,8 +42,8 @@ const Footer = (props: Props) => {
             </li>
           </ul>
         </div>
-        <div className="mb-10 flex justify-center md:mb-0 md:justify-end">
-          <ul className="space-y-4">
+        <div className="mb-10 flex flex-col gap-y-5 items-center md:mb-0 md:items-end">
+          {/* <ul className="space-y-4">
             <li className="cursor-pointer font-bold text-white hover:text-yellow-300">
               More on The Hike
             </li>
@@ -56,7 +56,14 @@ const Footer = (props: Props) => {
             <li className="cursor-pointer text-white hover:text-yellow-300">
               Press
             </li>
-          </ul>
+          </ul> */}
+          <div className="flex flex-col gap-y-5">
+            <p className="font-semibold md:self-start self-center text-yellow-300">Subscribe to our Newsletter</p>
+            <div className="flex gap-x-3">
+              <input type="text" placeholder="jonhdoe@mail.com" className="rounded-md border-2 px-4 h-10"/>
+              <button className="rounded-md h-10 px-4 text-yellow-300 bg-[#1f526b] ">Subscribe</button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

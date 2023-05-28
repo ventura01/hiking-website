@@ -19,7 +19,7 @@ const HeroSection = (props: Props) => {
             <BsInstagram className="cursor-pointer fill-white" />
           </div>
         </div>
-        <div className="flex flex-col items-center pt-48">
+        <div className="flex flex-col items-center pt-32">
           <div className="flex flex-col gap-y-10">
             <div className="flex gap-x-3 ">
               <div className="h-[2px] w-12 self-center bg-yellow-300"></div>
@@ -27,7 +27,7 @@ const HeroSection = (props: Props) => {
                 A Hiking Guide
               </p>
             </div>
-            <h1 className="text-center text-5xl text-white md:text-left md:text-8xl">
+            <h1 className="text-center text-5xl text-white md:text-left md:text-8xl md:font-normal leading-[60px] font-bold md:leading-normal">
               Be prepared for the <br className="hidden md:flex" />
               Mountains and beyond!
             </h1>

@@ -54,6 +54,7 @@ const Navbar = (props: Props) => {
       <div className="self-center">
         <HiUserCircle className="h-6 w-6 fill-white" />
       </div>
+      
       <button
         className="z-10 fixed right-5 flex rounded-full bg-[#050d11] px-2 py-2 text-yellow-300 md:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
