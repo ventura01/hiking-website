@@ -20,7 +20,7 @@ const HeroSection = (props: Props) => {
           </div>
         </div>
         <div className="flex flex-col items-center pt-32">
-          <div className="flex flex-col gap-y-10">
+          <div className="flex flex-col gap-y-16 items-center md:items-start md:gap-y-12">
             <div className="flex gap-x-3 ">
               <div className="h-[2px] w-12 self-center bg-yellow-300"></div>
               <p className="text-sm uppercase tracking-wider text-yellow-300">
