@@ -1,5 +1,6 @@
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import GoToTop from "@/components/GoToTop";
 import HeroSection from "@/components/HeroSection";
 import Testimonials from "@/components/Testimonials";
 // import Navbar from "@/components/Navbar";
@@ -10,6 +11,7 @@ export default function Home() {
     <main>
       {/* <Navbar /> */}
       <HeroSection />
+      <GoToTop />
       <Features />
       <Testimonials text="" name="" image=""   />
       <Footer />
