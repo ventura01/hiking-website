@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { HiUserCircle } from "react-icons/hi2";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // import { MdOutlineClose, MdMenu } from "react-icons/md";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import Image from "next/image";
@@ -12,6 +12,19 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  let menuRef = useRef<HTMLInputElement | null>(null);
+  useEffect(() => {
+    let handler = (e: MouseEvent) => {
+      if (!menuRef.current?.contains(e.target as HTMLElement)) {
+        setMenuOpen(false);
+        console.log(menuRef.current);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, []);
 
   return (
     <nav
@@ -28,6 +41,8 @@ const Navbar = (props: Props) => {
         />
       </div>
       <div
+        ref={menuRef}
+        id="menu"
         className={`${
           menuOpen
             ? "fixed top-24 z-10 flex w-[90%] flex-col items-center gap-y-10 rounded-3xl bg-[#050d11] pb-12 pt-8 text-yellow-300"
@@ -54,9 +69,9 @@ const Navbar = (props: Props) => {
       <div className="self-center">
         <HiUserCircle className="h-6 w-6 fill-white" />
       </div>
-      
+
       <button
-        className="z-10 fixed right-5 flex rounded-full bg-[#050d11] px-2 py-2 text-yellow-300 md:hidden"
+        className="fixed right-5 z-10 flex rounded-full bg-[#050d11] px-2 py-2 text-yellow-300 md:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? <HiXMark /> : <HiBars3 />}
