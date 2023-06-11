@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
+import CustomButton from "./CustomButton";
 
 type Props = {};
 
 const Features = (props: Props) => {
+  const handleScroll = () => {};
   return (
     <section id="features" className="container mx-auto max-w-screen-xl">
       <article className="grid grid-cols-1 py-32 md:grid-cols-2">
@@ -30,15 +34,22 @@ const Features = (props: Props) => {
               you – novice, moderate, advanced moderate, expert, or expert
               backpacker?
             </p>
-            <div className="mb-10 flex items-center gap-x-3 md:mb-0">
+            <CustomButton
+              title="Read more"
+              handleClick={handleScroll}
+              containerStyles="text-yellow-300"
+              rightIconStyles="ml-3 inline-block fill-yellow-300"
+              btnType="button"
+            />
+            {/* <div className="mb-10 flex items-center gap-x-3 md:mb-0">
               <span className="text-yellow-300">Read more</span>
               <HiArrowLongRight size={"24px"} className="fill-yellow-300" />
-            </div>
+            </div> */}
           </div>
         </div>
         <div>
           <Image
-            src="/mountain-1.jpg"
+            src="https://res.cloudinary.com/the-webdev/image/upload/v1684958600/hiking-project/mountain-1_sspmvj.jpg"
             width={600}
             height={600}
             alt="img"
@@ -49,7 +60,7 @@ const Features = (props: Props) => {
       <article className="grid grid-cols-1 py-32 md:grid-cols-2">
         <div className="row-start-2 row-end-3 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
           <Image
-            src="/mountain-2.jpg"
+            src="https://res.cloudinary.com/the-webdev/image/upload/v1684958593/hiking-project/mountain-2_eh2pxg.jpg"
             width={600}
             height={600}
             alt="img"
@@ -77,10 +88,17 @@ const Features = (props: Props) => {
               beginners make is wearing jeans and regular clothes, which will
               get heavy and chafe wif they get sweaty or wet.
             </p>
-            <div className="mb-10 flex items-center gap-x-3 md:mb-0">
+            {/* <div className="mb-10 flex items-center gap-x-3 md:mb-0">
               <span className="text-yellow-300">Read more</span>
               <HiArrowLongRight size={"24px"} className="fill-yellow-300" />
-            </div>
+            </div> */}
+            <CustomButton
+              title="Read more"
+              handleClick={handleScroll}
+              containerStyles="text-yellow-300"
+              rightIconStyles="ml-3 inline-block fill-yellow-300"
+              btnType="button"
+            />
           </div>
         </div>
       </article>
@@ -106,15 +124,22 @@ const Features = (props: Props) => {
               next landmark is as I hike. For example, I’ll read the guide and
               know that say, in a mile, I make a right turn at the junction..
             </p>
-            <div className="mb-10 flex items-center gap-x-3 md:mb-0">
+            {/* <div className="mb-10 flex items-center gap-x-3 md:mb-0">
               <span className="text-yellow-300">Read more</span>
               <HiArrowLongRight size={"24px"} className="fill-yellow-300" />
-            </div>
+            </div> */}
+            <CustomButton
+              title="Read more"
+              handleClick={handleScroll}
+              containerStyles="text-yellow-300"
+              rightIconStyles="ml-3 inline-block fill-yellow-300"
+              btnType="button"
+            />
           </div>
         </div>
         <div>
           <Image
-            src="/mountain-3.jpg"
+            src="https://res.cloudinary.com/the-webdev/image/upload/v1684958594/hiking-project/mountain-3_v3jojs.jpg"
             width={600}
             height={600}
             alt="img"

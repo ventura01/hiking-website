@@ -22,28 +22,28 @@ const Testimonials = (props: TestimonialsProps) => {
     setIndex(index + 1);
   };
   return (
-    <section id="testimonials" className="md:container md:max-w-screen-xl md:mx-auto py-20">
-      <h3 className="text-4xl text-white text-center font-light mb-20">
+    <section
+      id="testimonials"
+      className="py-20 md:container md:mx-auto md:max-w-screen-xl"
+    >
+      <h3 className="mb-20 text-center text-4xl font-light text-white">
         What they’ve said
       </h3>
-      <div className="md:grid grid-cols-1 md:grid-cols-4 md:gap-x-5 mb-10 hidden">
+      <div className="mb-10 hidden grid-cols-1 md:grid md:grid-cols-4 md:gap-x-5">
         {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.name}
-            className="bg-white relative pt-12 pb-5"
-          >
+          <div key={testimonial.name} className="relative bg-white pb-5 pt-12">
             <Image
               src={testimonial.image}
               width={75}
               height={75}
               alt="testimonial"
-              className="w-12 h-auto absolute top-0 transform right-1/2 translate-x-1/2 -translate-y-1/2 "
+              className="absolute right-1/2 top-0 h-auto w-12 -translate-y-1/2 translate-x-1/2 transform "
             />
             <div className="px-5">
-              <span className="text-sm font-semibold text-center text-[#050d11] block mb-3">
+              <span className="mb-3 block text-center text-sm font-semibold text-[#050d11]">
                 {testimonial.name}
               </span>
-              <p className="text-[#1f526b] text-sm text-center font-light">
+              <p className="text-center text-sm font-light text-[#1f526b]">
                 {testimonial.text}
               </p>
             </div>
@@ -51,34 +51,34 @@ const Testimonials = (props: TestimonialsProps) => {
         ))}
       </div>
       {/* SLIDER */}
-      <div className="bg-white mb-5 mx-5 md:mb-0 relative pt-12 pb-5 md:hidden flex">
+      <div className="relative mx-5 mb-5 flex bg-white pb-5 pt-12 md:mb-0 md:hidden">
         <Image
           src={testimonials[index].image}
           width={75}
           height={75}
           alt="testimonial"
-          className="w-12 h-auto absolute top-0 transform right-1/2 translate-x-1/2 -translate-y-1/2 "
+          className="absolute right-1/2 top-0 h-auto w-12 -translate-y-1/2 translate-x-1/2 transform "
         />
         <div className="px-5">
-          <span className="text-sm font-semibold text-center text-[#050d11] block mb-3">
+          <span className="mb-3 block text-center text-sm font-semibold text-[#050d11]">
             {testimonials[index].name}
           </span>
-          <p className="text-[#1f526b] text-xs text-center font-light">
+          <p className="text-center text-xs font-light text-[#1f526b]">
             {testimonials[index].text}
           </p>
         </div>
       </div>
-      <div className="flex justify-center gap-x-2 md:hidden mb-20">
+      <div className="mb-20 flex justify-center gap-x-2 md:hidden">
         <button>
           <BsChevronLeft
             onClick={handlePrev}
-            className="block h-6 w-6 text-white transition delay-150 ease-in-out hover:-translate-x-1 bg-brightRed rounded-full px-1 py-1"
+            className="bg-brightRed block h-6 w-6 rounded-full px-1 py-1 text-white transition delay-150 ease-in-out hover:-translate-x-1"
           />
         </button>
         <button>
           <BsChevronRight
             onClick={handleNext}
-            className="block h-6 w-6 text-white transition delay-150 ease-in-out hover:translate-x-1 bg-brightRed rounded-full px-1 py-1"
+            className="bg-brightRed block h-6 w-6 rounded-full px-1 py-1 text-white transition delay-150 ease-in-out hover:translate-x-1"
           />
         </button>
       </div>
